@@ -54,100 +54,194 @@ getbtn.grid(row=0,column=6,padx=20,pady=2)
         #option.set('small')
         #typeEntry=OptionMenu(transaction_details_frame,option,'small','medium','large')
         #typeEntry.grid(row=0,column=5)
+
 variableFrame=Frame(root)
 variableFrame.pack()
+#IP
 transaction_details_frame1=LabelFrame(variableFrame,text='IP VAR',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
 transaction_details_frame1.grid(row=0,column=0)
 var1label=Label(transaction_details_frame1,text='VAR 1',font=('times new roman',15,'bold'),fg='white',bg='grey20')
-var1label.grid(row=0,column=0,pady=9,padx=10)
-var1Entry=Entry(transaction_details_frame1,font=('arial',15),bd=7,width=18)
-var1Entry.grid(row=0,column=1,pady=9,padx=10)
+var1label.grid(row=0,column=0,pady=14,padx=10)
 var2label=Label(transaction_details_frame1,text='VAR 2',font=('times new roman',15,'bold'),fg='white',bg='grey20')
-var2label.grid(row=1,column=0,pady=9,padx=10)
-var2Entry=Entry(transaction_details_frame1,font=('arial',15),bd=7,width=18)
-var2Entry.grid(row=1,column=1,pady=9,padx=10)
+var2label.grid(row=1,column=0,pady=14,padx=10)
 var3label=Label(transaction_details_frame1,text='VAR 3',font=('times new roman',15,'bold'),fg='white',bg='grey20')
-var3label.grid(row=2,column=0,pady=9,padx=10)
-var3Entry=Entry(transaction_details_frame1,font=('arial',15),bd=7,width=18)
-var3Entry.grid(row=2,column=1,pady=9,padx=10)
+var3label.grid(row=2,column=0,pady=14,padx=10)
 var4label=Label(transaction_details_frame1,text='VAR 4',font=('times new roman',15,'bold'),fg='white',bg='grey20')
-var4label.grid(row=3,column=0,pady=9,padx=10)
-var4Entry=Entry(transaction_details_frame1,font=('arial',15),bd=7,width=18)
-var4Entry.grid(row=3,column=1,pady=9,padx=10)
+var4label.grid(row=3,column=0,pady=14,padx=10)
 var5label=Label(transaction_details_frame1,text='VAR 5',font=('times new roman',15,'bold'),fg='white',bg='grey20')
-var5label.grid(row=4,column=0,pady=9,padx=10)
-var5Entry=Entry(transaction_details_frame1,font=('arial',15),bd=7,width=18)
+var5label.grid(row=4,column=0,pady=14,padx=10)
+
+
+#EV
+var1ev=IntVar()
+var2ev=IntVar()
+var3ev=IntVar()
+var4ev=IntVar()
+var5ev=IntVar()
+transaction_details_frame2=LabelFrame(variableFrame,text='EV Entry',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
+transaction_details_frame2.grid(row=0,column=1)
+var1Entry=Entry(transaction_details_frame2,textvariable=var1ev,font=('arial',15),bd=7,width=18)
+var1Entry.grid(row=0,column=1,pady=9,padx=10)
+var2Entry=Entry(transaction_details_frame2,textvariable=var2ev,font=('arial',15),bd=7,width=18)
+var2Entry.grid(row=1,column=1,pady=9,padx=10)
+var3Entry=Entry(transaction_details_frame2,textvariable=var3ev,font=('arial',15),bd=7,width=18)
+var3Entry.grid(row=2,column=1,pady=9,padx=10)
+var4Entry=Entry(transaction_details_frame2,textvariable=var4ev,font=('arial',15),bd=7,width=18)
+var4Entry.grid(row=3,column=1,pady=9,padx=10)
+var5Entry=Entry(transaction_details_frame2,textvariable=var5ev,font=('arial',15),bd=7,width=18)
 var5Entry.grid(row=4,column=1,pady=9,padx=10)
 
-
-
 #CV
-transaction_details_frame2=LabelFrame(variableFrame,text='CV Entry',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
-transaction_details_frame2.grid(row=0,column=1)
-cventry1=Entry(transaction_details_frame2,font=('arial',15),bd=7,width=18)
-cventry1.grid(row=0,column=1,pady=9,padx=10)
-cventry2=Entry(transaction_details_frame2,font=('arial',15),bd=7,width=18)
-cventry2.grid(row=1,column=1,pady=9,padx=10)
-cventry3=Entry(transaction_details_frame2,font=('arial',15),bd=7,width=18)
-cventry3.grid(row=2,column=1,pady=9,padx=10)
-cventry4=Entry(transaction_details_frame2,font=('arial',15),bd=7,width=18)
-cventry4.grid(row=3,column=1,pady=9,padx=10)
-cventry5=Entry(transaction_details_frame2,font=('arial',15),bd=7,width=18)
-cventry5.grid(row=4,column=1,pady=9,padx=10)
+var1cv=IntVar()
+var2cv=IntVar()
+var3cv=IntVar()
+var4cv=IntVar()
+var5cv=IntVar()
+transaction_details_frame3=LabelFrame(variableFrame,text='CV Entry',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
+transaction_details_frame3.grid(row=0,column=2)
+cventry1=Entry(transaction_details_frame3,textvariable=var1cv,font=('arial',15),bd=7,width=18)
+cventry1.grid(row=0,column=2,pady=9,padx=10)
+cventry2=Entry(transaction_details_frame3,textvariable=var2cv,font=('arial',15),bd=7,width=18)
+cventry2.grid(row=1,column=2,pady=9,padx=10)
+cventry3=Entry(transaction_details_frame3,textvariable=var3cv,font=('arial',15),bd=7,width=18)
+cventry3.grid(row=2,column=2,pady=9,padx=10)
+cventry4=Entry(transaction_details_frame3,textvariable=var4cv,font=('arial',15),bd=7,width=18)
+cventry4.grid(row=3,column=2,pady=9,padx=10)
+cventry5=Entry(transaction_details_frame3,textvariable=var5cv,font=('arial',15),bd=7,width=18)
+cventry5.grid(row=4,column=2,pady=9,padx=10)
 
+#%C RESULT BLOCK
+transaction_details_frame4=LabelFrame(variableFrame,text='%C RESULT',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
+transaction_details_frame4.grid(row=0,column=3)
 
 
 #D RANGE
+dentryvar1=StringVar()
+dentryvar2=StringVar()
+dentryvar3=StringVar()
+dentryvar4=StringVar()
+dentryvar5=StringVar()
 
-transaction_details_frame3=LabelFrame(variableFrame,text='D Range',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
-transaction_details_frame3.grid(row=0,column=2)
+transaction_details_frame5=LabelFrame(variableFrame,text='D Range',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
+transaction_details_frame5.grid(row=0,column=4)
 
-dentry1=ttk.Combobox(transaction_details_frame3,font=('arial',15),state="readonly")
+dentry1 = ttk.Combobox(transaction_details_frame5,font=('arial',15),state="readonly", textvariable=dentryvar1)
 dentry1["value"]=("Low","Medium","High")
 dentry1.grid(row=0,column=1,pady=14,padx=10)
 
-dentry2=ttk.Combobox(transaction_details_frame3,font=('arial',15),state="readonly")
+dentry2 = ttk.Combobox(transaction_details_frame5,font=('arial',15),state="readonly", textvariable=dentryvar2)
 dentry2["value"]=("Low","Medium","High")
 dentry2.grid(row=1,column=1,pady=14,padx=9)
 
-dentry3=ttk.Combobox(transaction_details_frame3,font=('arial',15),state="readonly")
-dentry3["value"]=("Low","Medium","High")
+dentry3=ttk.Combobox(transaction_details_frame5,font=('arial',15),state="readonly", textvariable=dentryvar3)
+dentry3["value"]=("Low","NA","High")
 dentry3.grid(row=2,column=1,pady=14,padx=9)
 
-dentry4=ttk.Combobox(transaction_details_frame3,font=('arial',15),state="readonly")
-dentry4["value"]=("Low","Medium","High")
+dentry4=ttk.Combobox(transaction_details_frame5,font=('arial',15),state="readonly", textvariable=dentryvar4)
+dentry4["value"]=("Low","NA","High")
 dentry4.grid(row=3,column=1,pady=14,padx=9)
 
-dentry5=ttk.Combobox(transaction_details_frame3,font=('arial',15),state="readonly")
-dentry5["value"]=("Low","Medium","High")
+dentry5=ttk.Combobox(transaction_details_frame5,font=('arial',15),state="readonly", textvariable=dentryvar5)
+dentry5["value"]=("Low","NA","High")
 dentry5.grid(row=4,column=1,pady=14,padx=9)
 
 
 
 #ND RANGE
+ndentryvar1=StringVar()
+ndentryvar2=StringVar()
+ndentryvar3=StringVar()
+ndentryvar4=StringVar()
+ndentryvar5=StringVar()
+transaction_details_frame6=LabelFrame(variableFrame,text='ND_Range',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
+transaction_details_frame6.grid(row=0,column=5)
 
-transaction_details_frame4=LabelFrame(variableFrame,text='ND_Range',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
-transaction_details_frame4.grid(row=0,column=3)
+ndentry1=ttk.Combobox(transaction_details_frame6,font=('arial',15),state="readonly",textvariable=ndentryvar1)
+ndentry1["value"]=("Low","Medium","High")
+ndentry1.grid(row=0,column=1,pady=14,padx=10)
 
-dentry1=ttk.Combobox(transaction_details_frame4,font=('arial',15),state="readonly")
-dentry1["value"]=("Low","Medium","High")
-dentry1.grid(row=0,column=1,pady=14,padx=10)
+ndentry2=ttk.Combobox(transaction_details_frame6,font=('arial',15),state="readonly",textvariable=ndentryvar2)
+ndentry2["value"]=("Low","Medium","High")
+ndentry2.grid(row=1,column=1,pady=14,padx=9)
 
-dentry2=ttk.Combobox(transaction_details_frame4,font=('arial',15),state="readonly")
-dentry2["value"]=("Low","Medium","High")
-dentry2.grid(row=1,column=1,pady=14,padx=9)
+ndentry3=ttk.Combobox(transaction_details_frame6,font=('arial',15),state="readonly",textvariable=ndentryvar3)
+ndentry3["value"]=("Low","NA","High")
+ndentry3.grid(row=2,column=1,pady=14,padx=9)
 
-dentry3=ttk.Combobox(transaction_details_frame4,font=('arial',15),state="readonly")
-dentry3["value"]=("Low","Medium","High")
-dentry3.grid(row=2,column=1,pady=14,padx=9)
+ndentry4=ttk.Combobox(transaction_details_frame6,font=('arial',15),state="readonly",textvariable=ndentryvar4)
+ndentry4["value"]=("Low","NA","High")
+ndentry4.grid(row=3,column=1,pady=14,padx=9)
 
-dentry4=ttk.Combobox(transaction_details_frame4,font=('arial',15),state="readonly")
-dentry4["value"]=("Low","Medium","High")
-dentry4.grid(row=3,column=1,pady=14,padx=9)
+ndentry5=ttk.Combobox(transaction_details_frame6,font=('arial',15),state="readonly",textvariable=ndentryvar5)
+ndentry5["value"]=("Low","NA","High")
+ndentry5.grid(row=4,column=1,pady=14,padx=9)
 
-dentry5=ttk.Combobox(transaction_details_frame4,font=('arial',15),state="readonly")
-dentry5["value"]=("Low","Medium","High")
-dentry5.grid(row=4,column=1,pady=14,padx=9)
+
+
+def calculate_c():
+        evvar1=var1ev.get()
+        evvar2=var2ev.get()
+        evvar3=var3ev.get()
+        evvar4=var4ev.get()
+        evvar5=var5ev.get()
+        cvvar1=var1cv.get()
+        cvvar2=var2cv.get()
+        cvvar3=var3cv.get()
+        cvvar4=var4cv.get()
+        cvvar5=var5cv.get()
+        result1label=Label(transaction_details_frame4,text=(cvvar1/evvar1)*100,font=('times new roman',15,'bold'),fg='white',bg='grey20')
+        result1label.grid(row=0,column=3,pady=14,padx=10)
+        result2label=Label(transaction_details_frame4,text=(cvvar2/evvar2)*100,font=('times new roman',15,'bold'),fg='white',bg='grey20')
+        result2label.grid(row=1,column=3,pady=14,padx=10)
+        result3label=Label(transaction_details_frame4,text=(cvvar3/evvar3)*100,font=('times new roman',15,'bold'),fg='white',bg='grey20')
+        result3label.grid(row=2,column=3,pady=14,padx=10)
+        result4label=Label(transaction_details_frame4,text=(cvvar4/evvar4)*100,font=('times new roman',15,'bold'),fg='white',bg='grey20')
+        result4label.grid(row=3,column=3,pady=14,padx=10)
+        result5label=Label(transaction_details_frame4,text=(cvvar5/evvar5)*100,font=('times new roman',15,'bold'),fg='white',bg='grey20')
+        result5label.grid(row=4,column=3,pady=14,padx=10)
+        resvar1=(cvvar1/evvar1)*100
+        resvar2=(cvvar2/evvar2)*100
+        resvar3=(cvvar3/evvar3)*100
+        resvar4=(cvvar4/evvar4)*100
+        resvar5=(cvvar5/evvar5)*100
+
+        if(resvar1<=50):
+                dentryvar1.set('Low')
+                ndentryvar1.set('NA')
+        elif(resvar1>51 and resvar1<99):
+                dentryvar1.set('Medium')
+                ndentryvar1.set('NA')
+        elif(resvar1>99):
+                dentryvar1.set('NA')
+                ndentryvar1.set('High')
+        if(resvar2>=51 and resvar1<=100):
+                dentryvar2.set('Medium')
+                ndentryvar2.set('NA')
+        elif(resvar2>99):
+                dentryvar2.set('NA')
+                ndentryvar2.set('High')
+        elif(resvar2<=50):
+                dentryvar2.set('NA')
+                ndentryvar2.set('Low')
+        if(resvar3<10):
+                dentryvar3.set('Low')
+                ndentryvar3.set('NA')
+        elif(resvar3>10):
+                dentryvar3.set('NA')
+                ndentryvar3.set('High')
+        if(resvar4<5):
+                dentryvar4.set('Low')
+                ndentryvar4.set('NA')
+        elif(resvar4>5):
+                dentryvar4.set('NA')
+                ndentryvar4.set('High')
+        if(resvar5>98):
+                dentryvar5.set('High')
+                ndentryvar5.set('NA')
+        elif(resvar5<98):
+                dentryvar5.set('NA')
+                ndentryvar5.set('Low')
+
 
 
 
@@ -155,24 +249,26 @@ dentry5.grid(row=4,column=1,pady=14,padx=9)
 
 variableFrame1=Frame(root)
 variableFrame1.pack()
-transaction_details_frame5=LabelFrame(variableFrame1,text="Calculate %c",font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
+transaction_details_frame5=LabelFrame(variableFrame1,text="OPTIONS",font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
 transaction_details_frame5.grid(row=3,column=2)
+calc_btn = Button(transaction_details_frame5,text = "Calculate %c",command=calculate_c,font=("lucida",12,"bold"),bd = 7,relief = GROOVE)
+calc_btn.grid(row = 1,column = 4,ipadx = 20,padx = 30)
 
 
 total_btn = Button(transaction_details_frame5,text = "Show Result",font=("lucida",12,"bold"),bd = 7,relief = GROOVE)
-total_btn.grid(row = 1,column = 4,ipadx = 20,padx = 30)
+total_btn.grid(row = 1,column = 5,ipadx = 20,padx = 30)
 
         #========================
 genbill_btn = Button(transaction_details_frame5,text = "Add",font=("lucida",12,"bold"),bd = 7,relief = GROOVE)
-genbill_btn.grid(row = 1,column = 5,ipadx = 20)
+genbill_btn.grid(row = 1,column = 6,ipadx = 20)
 
         #====================
 clear_btn = Button(transaction_details_frame5,text = "Compare",font=("lucida",12,"bold"),bd = 7,relief = GROOVE)
-clear_btn.grid(row = 1,column = 6,ipadx = 20,padx = 30)
+clear_btn.grid(row = 1,column = 7,ipadx = 20,padx = 30)
 
         #======================
 exit_btn = Button(transaction_details_frame5,text = "Exit",font=("lucida",12,"bold"),bd = 7,relief = GROOVE,command = exit)
-exit_btn.grid(row = 1,column = 7,ipadx = 20)
+exit_btn.grid(row = 1,column = 8,ipadx = 20)
 
 
 
@@ -224,4 +320,3 @@ Student_table.pack(fill=BOTH, expand=True)
 GET_DATA()
 Student_table.bind("<ButtonRelease-1>",FOCUS)
 root.mainloop()
-
